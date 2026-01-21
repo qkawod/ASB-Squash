@@ -3,6 +3,7 @@
 import { Hero } from "@/components/Hero"
 import Link from "next/link"
 import React from "react"
+import { motion } from "framer-motion"
 
 const TECHNOLOGY_ITEMS = [
     {
@@ -109,7 +110,13 @@ export default function TechnologyPage() {
                         className={`flex flex-col md:flex-row items-start gap-12 md:gap-24 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
                     >
                         {/* Image Side */}
-                        <div className="w-full md:w-1/2">
+                        <motion.div
+                            className="w-full md:w-1/2"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+                        >
                             <div className="group relative rounded-xl overflow-hidden shadow-2xl bg-slate-200 flex items-center justify-center">
                                 {item.image ? (
                                     item.image.endsWith('.mp4') ? (
@@ -143,10 +150,16 @@ export default function TechnologyPage() {
                                 )}
                                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-700" />
                             </div>
-                        </div>
+                        </motion.div>
 
                         {/* Text Side */}
-                        <div className="w-full md:w-1/2 space-y-6 pt-4">
+                        <motion.div
+                            className="w-full md:w-1/2 space-y-6 pt-4"
+                            initial={{ opacity: 0, x: index % 2 === 0 ? 30 : -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
                             <div>
                                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 leading-tight">
                                     {item.title}
@@ -168,7 +181,7 @@ export default function TechnologyPage() {
                                     </div>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 ))}
             </div>

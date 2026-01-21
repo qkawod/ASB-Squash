@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 const HERO_IMAGES = [
     "/T-point/88.jpg",
@@ -76,18 +77,22 @@ export default function ProductsPage() {
                 <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-slate-50 to-transparent z-10" />
             </section>
 
-            {/* Spacer to match Technology page */}
-            <div className="h-72"></div>
-
             {/* Product List Section with Spacing */}
-            <div className="container mx-auto px-4 pb-32 space-y-32">
+            <div className="container mx-auto px-4 py-24 space-y-24">
                 {PRODUCT_ITEMS.map((product, index) => (
                     <div
                         key={index}
-                        className={`flex flex-col md:flex-row items-start gap-12 md:gap-24 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
+                        className={`flex flex-col md:flex-row items-center gap-12 md:gap-24 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
                     >
                         {/* Image Side */}
-                        <div className="w-full md:w-1/2">
+                        <motion.div
+                            className="w-full md:w-1/2"
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={index === 0 ? undefined : { opacity: 1, scale: 1 }}
+                            animate={index === 0 ? { opacity: 1, scale: 1 } : undefined}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6 }}
+                        >
                             <Link href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}>
                                 <div className="group relative rounded-xl overflow-hidden shadow-2xl bg-slate-900 cursor-pointer">
                                     <img
@@ -98,10 +103,17 @@ export default function ProductsPage() {
                                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-700" />
                                 </div>
                             </Link>
-                        </div>
+                        </motion.div>
 
                         {/* Text Side */}
-                        <div className="w-full md:w-1/2 space-y-6 pt-4">
+                        <motion.div
+                            className="w-full md:w-1/2 space-y-6 pt-4"
+                            initial={{ opacity: 0, x: index % 2 === 0 ? 30 : -30 }}
+                            whileInView={index === 0 ? undefined : { opacity: 1, x: 0 }}
+                            animate={index === 0 ? { opacity: 1, x: 0 } : undefined}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, delay: index === 0 ? 0.2 : 0.2 }}
+                        >
                             <div>
                                 <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-2 leading-tight">
                                     {product.title}
@@ -123,7 +135,7 @@ export default function ProductsPage() {
                             >
                                 SEE DETAILS
                             </Link>
-                        </div>
+                        </motion.div>
                     </div>
                 ))}
             </div>

@@ -1,6 +1,9 @@
+'use client'
+
 import { Hero } from "@/components/Hero"
 import ProjectCard from "@/components/ProjectCard"
 import { REFERENCES } from "@/data/references"
+import { motion } from "framer-motion"
 
 export default function ReferencesPage() {
 
@@ -29,17 +32,24 @@ export default function ReferencesPage() {
 
             <div className="py-20">
                 <div className="container mx-auto px-4">
-                    <h2 className="text-3xl font-bold mb-10 pl-2 text-slate-900">Case Studies</h2>
+
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {REFERENCES.map((project, index) => (
-                            <ProjectCard
+                            <motion.div
                                 key={index}
-                                title={project.title}
-                                location={project.location}
-                                image={project.image}
-                                slug={project.slug}
-                                type={project.category}
-                            />
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: (index % 6) * 0.1 }}
+                            >
+                                <ProjectCard
+                                    title={project.title}
+                                    location={project.location}
+                                    image={project.image}
+                                    slug={project.slug}
+                                    type={project.category}
+                                />
+                            </motion.div>
                         ))}
                     </div>
                 </div>

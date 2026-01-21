@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { Camera, Gamepad2 } from "lucide-react"
+import Link from "next/link"
 
 export interface ProductData {
     title: string
@@ -50,12 +51,14 @@ export function ProductDetailLayout({ product }: { product: ProductData }) {
 
                         <div>
                             <div className="flex gap-4 mb-8">
-                                <Camera className="w-8 h-8 text-orange-400" />
-                                <Gamepad2 className="w-8 h-8 text-orange-400" />
+                                <Camera className="w-8 h-8 text-[#C62828]" />
+                                <Gamepad2 className="w-8 h-8 text-[#C62828]" />
                             </div>
-                            <button className="w-full py-4 bg-[#D32F2F] hover:bg-[#B71C1C] text-white font-bold text-lg transition-colors uppercase">
-                                Ask for more information
-                            </button>
+                            <Link href="/contact" className="block w-full">
+                                <button className="w-full py-4 bg-[#D32F2F] hover:bg-[#B71C1C] text-white font-bold text-lg transition-colors uppercase">
+                                    CONTACT US
+                                </button>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -86,7 +89,7 @@ export function ProductDetailLayout({ product }: { product: ProductData }) {
 
                     {product.features.length > 0 && (
                         <>
-                            <p className="mt-4 font-bold">{product.title} main advantages:</p>
+                            <p className="mt-4 font-bold">{product.title} 주요 특징 (Main Advantages):</p>
                             <ul className="list-disc pl-5 space-y-2">
                                 {product.features.map((feature, idx) => (
                                     <li key={idx}>{feature}</li>

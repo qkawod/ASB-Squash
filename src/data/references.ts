@@ -16,12 +16,11 @@ export interface ProjectReference {
 export const REFERENCES: ProjectReference[] = [
     {
         category: "ASB System100",
-        title: "Korea Hap-po Squash Courts",
+        title: "마산합포스포츠센터",
         location: "Masan, South Korea",
-        image: "/projects/hap-po/main.jpg",
+        image: "/projects/hap-po/1054.jpg",
         slug: "hap-po",
         gallery: [
-            "/projects/hap-po/main.jpg",
             "/projects/hap-po/1034.jpg",
             "/projects/hap-po/1053.jpg",
             "/projects/hap-po/1054.jpg",
@@ -64,7 +63,7 @@ export const REFERENCES: ProjectReference[] = [
     },
     {
         category: "ASB System100",
-        title: "South Korea Naju",
+        title: "나주시 스쿼시경기장",
         location: "Naju, South Korea",
         image: "/projects/naju/585.jpg",
         slug: "naju",
@@ -147,13 +146,11 @@ export const REFERENCES: ProjectReference[] = [
     },
     {
         category: "ASB System100",
-        title: "Munsu Squash Centre in Ulsan",
+        title: "문수스쿼시경기장",
         location: "Ulsan, South Korea",
-        image: "/projects/munsu-ulsan/main.jpg",
+        image: "/projects/munsu-ulsan/63.jpg",
         slug: "munsu-ulsan",
         gallery: [
-            "/projects/munsu-ulsan/main.jpg",
-            "/projects/munsu-ulsan/90.jpg",
             "/projects/munsu-ulsan/69.jpg",
             "/projects/munsu-ulsan/68.jpg",
             "/projects/munsu-ulsan/63.jpg",
@@ -211,6 +208,35 @@ export const REFERENCES: ProjectReference[] = [
             { label: "Courts", value: "ASB ShowGlassCourt" },
             { label: "Walls", value: "ASB System100" },
             { label: "Walls", value: "ASB Freestanding GlassBackWall" },
+            { label: "Floors", value: "ASB SportsFloor" },
+            { label: "Accessories", value: "ASB Height AdjustableTin" }
+        ]
+    },
+    {
+        category: "ASB System100",
+        title: "진천국가대표선수촌",
+        location: "Jincheon, South Korea",
+        image: "/진천1.jpg",
+        slug: "jincheon",
+        gallery: [
+            "/진천1.jpg",
+            "/진천2.jpg",
+            "/image_9.jpg"
+        ],
+        subtitle: "National Training Center",
+        description: [
+            "대한민국 엘리트 스포츠의 심장, 진천국가대표선수촌에 세계적 수준의 ASB System100 스쿼시 코트 3면이 설치되었습니다.",
+            "국가대표 선수들이 국제 무대에서 최고의 기량을 발휘할 수 있도록, 세계스쿼시연맹(WSF)의 엄격한 기준을 충족하는 최첨단 경기 환경을 구현했습니다.",
+            "모든 코트에는 충격 흡수율과 반발력이 뛰어난 ASB SportsFloor와, 시각적 개방감 및 내구성을 보장하는 ASB Pro GlassBackWall이 적용되어 선수들의 부상 방지와 경기력 향상에 최적화되어 있습니다.",
+            "특히 도입된 ASB Movable SideWall(이동식 측벽) 시스템은 버튼 조작만으로 단식 코트를 복식 규격으로 전환할 수 있게 하여, 선수들이 다양한 전술 훈련과 실전 시뮬레이션을 유연하게 수행할 수 있는 환경을 제공합니다.",
+            "또한 ASB Height Adjustable Tin(높이 조절 틴) 시스템을 적용하여, 프로스쿼시연맹(PSA) 공식 경기 규격과 일반 훈련 규격을 자유롭게 오가며 실전과 동일한 정밀한 훈련이 가능하도록 설계되었습니다.",
+            "대한민국 스쿼시의 미래를 책임질 국가대표 선수들의 땀과 열정이 서린 이곳에 ASB의 기술력이 함께합니다."
+        ],
+        details: [
+            { label: "Courts", value: "ASB System100" },
+            { label: "Walls", value: "ASB System100" },
+            { label: "Walls", value: "ASB Movable SideWall" },
+            { label: "Walls", value: "ASB Pro GlassBackWall" },
             { label: "Floors", value: "ASB SportsFloor" },
             { label: "Accessories", value: "ASB Height AdjustableTin" }
         ]
@@ -586,33 +612,7 @@ export const REFERENCES: ProjectReference[] = [
             { label: "Accessories", value: "ASB Height AdjustableTin" }
         ]
     },
-    {
-        category: "ASB System100",
-        title: "USA Houston Squash Club",
-        location: "Houston, USA",
-        image: "/projects/usa-houston/main.jpg",
-        slug: "usa-houston",
-        gallery: [
-            "/projects/usa-houston/main.jpg",
-            "/projects/usa-houston/785.jpg",
-            "/projects/usa-houston/781.jpg",
-            "/projects/usa-houston/782.jpg",
-            "/projects/usa-houston/777.jpg"
-        ],
-        subtitle: "Host of World Junior Championships",
-        description: [
-            "텍사스 휴스턴에 위치한 이 센터는 4개의 새로운 ASB System100 코트와 방송 중계가 가능한 PSA 규격의 쇼 코트를 요청했습니다.",
-            "미국 파트너사인 Endurance Squash Courts가 설치를 담당했으며, 이후 2024년 WSF 세계 주니어 스쿼시 선수권 대회 개최지로 선정되는 영광을 안았습니다."
-        ],
-        details: [
-            { label: "Courts", value: "ASB System100" },
-            { label: "Walls", value: "ASB System100" },
-            { label: "Walls", value: "ASB GlassWall" },
-            { label: "Walls", value: "ASB Pro GlassBackWall" },
-            { label: "Floors", value: "ASB SportsFloor" },
-            { label: "Accessories", value: "ASB Height AdjustableTin" }
-        ]
-    },
+
     {
         category: "ASB System100",
         title: "Ball Sports Arena Dresden",

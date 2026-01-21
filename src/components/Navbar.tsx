@@ -8,22 +8,22 @@ import { cn } from "@/lib/utils"
 
 const navItems = [
     {
-        label: "Products",
+        label: "제품군",
         href: "/products",
     },
     {
-        label: "Technology",
+        label: "테크놀로지",
         href: "/technology",
     },
     {
-        label: "Reference",
+        label: "레퍼런스",
         href: "/references",
     },
     {
-        label: "Company",
+        label: "컴퍼니",
         href: "/company",
     },
-    { label: "Contact", href: "/contact" },
+    { label: "컨택트", href: "/contact" },
 ]
 
 export function Navbar() {
@@ -31,18 +31,18 @@ export function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md text-slate-900 border-b border-slate-200">
-            <div className="container mx-auto px-4 h-24 flex items-center justify-between">
+            <div className="w-full px-10 h-24 flex items-center justify-between">
                 <Link href="/" className="flex items-center">
-                    <img src="/logo/logosquashcourt_s.svg" alt="ASB Squash" className="h-20 w-auto" />
+                    <img src="/logo/logosquashcourt_s.svg" alt="ASB Squash" className="h-[5.4rem] w-auto" />
                 </Link>
 
                 {/* Desktop Nav */}
-                <div className="hidden lg:flex items-center space-x-8">
+                <div className="hidden lg:flex items-center space-x-8 mr-[300px]">
                     {navItems.map((item) => (
                         <div key={item.label} className="relative group">
                             <Link
                                 href={item.href}
-                                className="text-base font-medium hover:text-yellow-600 transition-colors flex items-center gap-1"
+                                className="text-[20px] font-medium hover:text-yellow-600 transition-colors flex items-center gap-1"
                             >
                                 {item.label}
                             </Link>
@@ -87,6 +87,6 @@ export function Navbar() {
                     </motion.div>
                 )}
             </AnimatePresence>
-        </nav>
+        </nav >
     )
 }
