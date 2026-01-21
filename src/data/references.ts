@@ -216,11 +216,11 @@ export const REFERENCES: ProjectReference[] = [
         category: "ASB System100",
         title: "진천국가대표선수촌",
         location: "Jincheon, South Korea",
-        image: "/진천1.jpg",
+        image: "/jincheon1.jpg",
         slug: "jincheon",
         gallery: [
-            "/진천1.jpg",
-            "/진천2.jpg",
+            "/jincheon1.jpg",
+            "/jincheon2.jpg",
             "/image_9.jpg"
         ],
         subtitle: "National Training Center",
