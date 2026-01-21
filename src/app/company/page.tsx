@@ -112,65 +112,14 @@ export default function CompanyPage() {
 
 
             {/* 3. Philosophy Section (Success with Partners) */}
-            <section className="py-24 bg-slate-100/50">
+            <section className="py-24 bg-white">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-20">
                         <h3 className="text-[#C62828] font-bold text-sm tracking-widest uppercase mb-3">Our Philosophy</h3>
                         <h2 className="text-3xl md:text-4xl font-bold text-slate-900">"고객과 파트너가 우리의 성공을 만듭니다"</h2>
                     </div>
 
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {/* Column 1 */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5 }}
-                            className="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#C62828] group"
-                        >
-                            <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C62828] transition-colors duration-300">
-                                <TrendingUp className="w-8 h-8 text-[#C62828] group-hover:text-white transition-colors" />
-                            </div>
-                            <h4 className="text-xl font-bold text-slate-900 mb-4 capitalize">Investment Value</h4>
-                            <p className="text-slate-600 leading-relaxed break-keep">
-                                ASB의 풍부한 경험과 전문성은 귀하의 투자가치를 극대화하는 가장 확실한 자산입니다.
-                            </p>
-                        </motion.div>
 
-                        {/* Column 2 */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.1 }}
-                            className="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-slate-800 group"
-                        >
-                            <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mb-6 group-hover:bg-slate-800 transition-colors duration-300">
-                                <Settings className="w-8 h-8 text-slate-800 group-hover:text-white transition-colors" />
-                            </div>
-                            <h4 className="text-xl font-bold text-slate-900 mb-4 capitalize">Total Solution</h4>
-                            <p className="text-slate-600 leading-relaxed break-keep">
-                                품질, 기술 설계, 납기 준수, 그리고 보증 및 사후 관리에 이르기까지 압도적인 성능과 확실한 이점을 제공합니다.
-                            </p>
-                        </motion.div>
-
-                        {/* Column 3 */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: 0.2 }}
-                            className="bg-white p-10 rounded-xl shadow-lg hover:shadow-xl transition-shadow border-t-4 border-[#C62828] group"
-                        >
-                            <div className="w-16 h-16 bg-red-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#C62828] transition-colors duration-300">
-                                <Globe className="w-8 h-8 text-[#C62828] group-hover:text-white transition-colors" />
-                            </div>
-                            <h4 className="text-xl font-bold text-slate-900 mb-4 capitalize">Global Support</h4>
-                            <p className="text-slate-600 leading-relaxed break-keep">
-                                전 세계의 ASB 파트너들은 귀하의 든든한 지원군으로서 비즈니스 성공을 함께 실현합니다.
-                            </p>
-                        </motion.div>
-                    </div>
                 </div>
             </section>
 
@@ -307,7 +256,7 @@ export default function CompanyPage() {
                             href="/contact"
                             className="w-full sm:w-auto px-10 py-4 bg-[#C62828] hover:bg-[#b71c1c] text-white font-bold text-lg rounded-full transition-all hover:scale-105 shadow-xl shadow-red-900/30 flex items-center justify-center gap-2"
                         >
-                            문의하기 (Contact Us) <ArrowRight className="w-5 h-5" />
+                            Contact Us <ArrowRight className="w-5 h-5" />
                         </Link>
                         <Link
                             href="/references"

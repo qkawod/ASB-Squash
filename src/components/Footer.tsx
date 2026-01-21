@@ -7,12 +7,11 @@ export function Footer() {
                 <div className="flex flex-col gap-1 text-sm text-gray-400">
                     {/* Header with Logo */}
                     <div className="flex items-center gap-3">
-                        <h3 className="text-white font-bold text-lg leading-none">글로브(Globe Co.,Ltd)</h3>
                         <div>
                             <img
                                 src="/logo/logo_asbsquash.svg"
                                 alt="ASB Squash"
-                                className="h-[22px] w-auto relative top-[1px]"
+                                className="h-[44px] w-auto relative top-[1px]"
                             />
                         </div>
                     </div>
@@ -20,7 +19,6 @@ export function Footer() {
                     {/* Address Info */}
                     <div className="flex flex-col leading-tight mt-1">
                         <p>본사 : 경기도 성남시 분당구 판교역로 152, 1103</p>
-                        <p>Development Center : 인천광역시 중구 영종순환로 279-52</p>
                     </div>
 
                     {/* Contact Info */}

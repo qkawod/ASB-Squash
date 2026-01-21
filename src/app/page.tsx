@@ -54,7 +54,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <Link href="/products/system-courts" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
+              <Link href="/products/asb-system40" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
                 <img src="/system40/system40_03.jpg" alt="System Courts" className="w-full h-full object-contain bg-slate-900 transition-transform duration-700 scale-[2.0] group-hover:scale-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8 w-full">
@@ -75,7 +75,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              <Link href="/products/glass-courts" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
+              <Link href="/products/asb-glasscourt" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
                 <img src="/GlassCourt/london-classic-nc-08698-scaled.jpg" alt="Glass Courts" className="w-full h-full object-contain bg-slate-900 transition-transform duration-700 scale-[2.0] group-hover:scale-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8 w-full">
@@ -96,7 +96,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <Link href="/products/glass-courts" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
+              <Link href="/products/asb-system100" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
                 <img src="/system100/297-1024x802.jpg" alt="ASB GlassFloor" className="w-full h-full object-contain bg-slate-900 transition-transform duration-700 scale-[2.0] group-hover:scale-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8 w-full">
@@ -116,7 +116,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
             >
-              <Link href="/products" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
+              <Link href="/products/asb-gamecourt" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
                 <img src="/b_27.jpg" alt="ASB GameCourt" className="w-full h-full object-contain bg-slate-900 transition-transform duration-700 scale-[2.0] group-hover:scale-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8 w-full">
@@ -136,7 +136,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Link href="/products" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
+              <Link href="/products/asb-tpoint" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
                 <img src="/T-point/88.jpg" alt="ASB TPoint" className="w-full h-full object-contain bg-slate-900 transition-transform duration-700 scale-[2.0] group-hover:scale-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8 w-full">
@@ -156,7 +156,7 @@ export default function Home() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              <Link href="/products" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
+              <Link href="/products/asb-rainbowcourt" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
                 <img src="/b_106.jpg" alt="ASB RainbowCourt" className="w-full h-full object-contain bg-slate-900 transition-transform duration-700 scale-[2.0] group-hover:scale-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8 w-full">
