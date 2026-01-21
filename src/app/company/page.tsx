@@ -191,47 +191,47 @@ export default function CompanyPage() {
                         {[
                             {
                                 title: "ASB ShowGlassCourt",
-                                desc: "관람형 스쿼시의 표준이자 메이저 대회의 상징.",
+                                desc: "관람형 스쿼시의 표준이자 메이저 대회의 상징",
                                 img: "/projects/cairo-el-gouna/main.jpg",
-                                icon: Award
+                                link: "/products/asb-glasscourt"
                             },
                             {
-                                title: "ASB GlassFloor",
-                                desc: "스포츠 플로어링의 혁명, LED 기술 접목.",
+                                title: "ASB SportsFloor",
+                                desc: "충격 흡수율과 반발력이 뛰어난 프리미엄 바닥재",
                                 img: "/b_65.jpg",
-                                icon: Zap
+                                link: "/technology#asb-sportsfloor"
                             },
                             {
-                                title: "ASB Rotary GlassBackWall",
-                                desc: "공간 활용을 극대화하는 회전형 벽체.",
+                                title: "ASB GlassBackWall",
+                                desc: "공간 활용을 극대화하는 투명 유리 벽체",
                                 img: "/projects/belgium-herentals/597.jpg",
-                                icon: RefreshCw
+                                link: "/technology#asb-glassbackwall"
                             },
                             {
                                 title: "ASB Movable SideWall",
-                                desc: "버튼 하나로 코트 규격을 조절하는 가변형 시스템.",
+                                desc: "버튼 하나로 코트 규격을 조절하는 가변형 시스템",
                                 img: "/projects/naju/585.jpg",
-                                icon: Settings
+                                link: "/technology#asb-movable-sidewall"
                             }
                         ].map((item, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="group relative h-80 rounded-2xl overflow-hidden cursor-pointer"
-                            >
-                                <img src={item.img} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
-                                <div className="absolute bottom-0 left-0 p-8 w-full">
-                                    <div className="flex items-center gap-3 mb-2">
-                                        <item.icon className="text-[#C62828] w-6 h-6" />
-                                        <h3 className="text-2xl font-bold text-white">{item.title}</h3>
+                            <Link href={item.link} key={index} className="block h-full">
+                                <motion.div
+                                    initial={{ opacity: 0, scale: 0.95 }}
+                                    whileInView={{ opacity: 1, scale: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                                    className="group relative h-96 rounded-2xl overflow-hidden cursor-pointer"
+                                >
+                                    <img src={item.img} alt={item.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                                    <div className="absolute bottom-0 left-0 p-8 w-full">
+                                        <div className="flex items-center gap-3 mb-2">
+                                            <h3 className="text-2xl font-bold text-white">{item.title}</h3>
+                                        </div>
+                                        <p className="text-slate-300 font-medium break-keep">{item.desc}</p>
                                     </div>
-                                    <p className="text-slate-300 font-medium break-keep">{item.desc}</p>
-                                </div>
-                            </motion.div>
+                                </motion.div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -295,10 +295,10 @@ export default function CompanyPage() {
 
                 <div className="container mx-auto px-6 relative z-10 text-center">
                     <h3 className="text-[#C62828] font-bold text-sm tracking-widest uppercase mb-6">Our Promise</h3>
-                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">품질에 대한 책임,<br />평생의 파트너십</h2>
+                    <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">품질에 대한 책임<br />평생의 파트너십</h2>
 
                     <p className="text-lg text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed break-keep">
-                        철저한 품질 관리를 통해 고객이 늘 최신 기술을 누릴 수 있도록 보장하는 것, 이것이 ASB가 드리는 <span className="text-white font-bold">'신뢰(Certainty)'</span>입니다.
+                        철저한 품질 관리를 통해 고객이 늘 최신 기술을 누릴 수 있도록 보장하는 것, 이것이 ASB가 드리는 <span className="text-white font-bold">신뢰</span>입니다.
                         ASB SQUASH는 체계적인 사후 관리를 통해 귀하와 장기적인 파트너십을 이어갈 것을 약속드립니다.
                     </p>
 

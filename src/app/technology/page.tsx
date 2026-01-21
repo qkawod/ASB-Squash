@@ -107,6 +107,7 @@ export default function TechnologyPage() {
                 {TECHNOLOGY_ITEMS.map((item, index) => (
                     <div
                         key={index}
+                        id={item.title.toLowerCase().replace(/\s+/g, '-')}
                         className={`flex flex-col md:flex-row items-start gap-12 md:gap-24 ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}
                     >
                         {/* Image Side */}
