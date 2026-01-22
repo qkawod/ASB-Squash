@@ -20,19 +20,19 @@ export function Footer() {
                     {/* Navigation Links */}
                     <nav className="flex flex-wrap justify-center gap-8 text-[13px] font-bold tracking-widest text-[#999999]">
                         <Link href="/products" className="hover:text-white transition-colors">
-                            제품군
+                            PRODUCTS
                         </Link>
                         <Link href="/technology" className="hover:text-white transition-colors">
-                            테크놀로지
+                            TECHNOLOGY
                         </Link>
                         <Link href="/references" className="hover:text-white transition-colors">
-                            레퍼런스
+                            REFERENCES
                         </Link>
                         <Link href="/company" className="hover:text-white transition-colors">
-                            컴퍼니
+                            COMPANY
                         </Link>
                         <Link href="/contact" className="hover:text-white transition-colors">
-                            컨택트
+                            CONTACT
                         </Link>
                     </nav>
 
@@ -42,9 +42,9 @@ export function Footer() {
                         <span className="hidden sm:inline border-r border-[#333333] h-3 mx-2"></span>
                         <span className="whitespace-nowrap">Fax : 031-717-1181</span>
                         <span className="hidden sm:inline border-r border-[#333333] h-3 mx-2"></span>
-                        <span className="whitespace-nowrap">Email : globe@globecorp.co.kr</span>
+                        <span className="whitespace-nowrap">globe@globecorp.co.kr</span>
                         <span className="hidden sm:inline border-r border-[#333333] h-3 mx-2"></span>
-                        <span className="whitespace-nowrap">Add : 경기도 성남시 분당구 판교역로 152, 1103</span>
+                        <span className="whitespace-nowrap">경기도 성남시 분당구 판교역로 152, 1103</span>
                     </div>
 
                     {/* Copyright */}
