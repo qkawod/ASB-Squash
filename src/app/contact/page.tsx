@@ -70,10 +70,14 @@ export default function ContactPage() {
                             <div className="space-y-2">
                                 <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">Product Interest *</label>
                                 <select className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors appearance-none">
-                                    <option>ASB GlassFloor</option>
-                                    <option>ASB System40</option>
-                                    <option>ASB System100</option>
+                                    <option>ASB System 40</option>
+                                    <option>ASB System 100</option>
+                                    <option>ASB GlassCourt</option>
+                                    <option>ASB GameCourt</option>
+                                    <option>ASB TPoint</option>
+                                    <option>ASB RainbowCourt</option>
                                     <option>ASB LumiFlex</option>
+                                    <option>ASB GlassFloor</option>
                                 </select>
                             </div>
                         </div>
