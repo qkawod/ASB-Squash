@@ -4,8 +4,49 @@ import { useState } from 'react'
 import { Check } from "lucide-react"
 
 export default function ContactPage() {
-    // State for sports selection visualization (placeholder logic)
-    const [selectedSport, setSelectedSport] = useState('Basketball')
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [submitStatus, setSubmitStatus] = useState<{ success: boolean; message: string } | null>(null);
+
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitStatus(null);
+
+        const formData = new FormData(e.currentTarget);
+        const data = {
+            name: formData.get('name'),
+            companyName: formData.get('companyName'),
+            jobTitle: formData.get('jobTitle'),
+            email: formData.get('email'),
+            telephone: formData.get('telephone'),
+            inquiryType: formData.get('inquiryType'),
+            productInterest: formData.get('productInterest'),
+            message: formData.get('message'),
+        };
+
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            const result = await response.json();
+
+            if (!response.ok) {
+                throw new Error(result.error || 'Failed to send message');
+            }
+
+            setSubmitStatus({ success: true, message: 'Thank you! Your message has been sent successfully.' });
+            (e.target as HTMLFormElement).reset();
+        } catch (error) {
+            setSubmitStatus({ success: false, message: 'Failed to send message. Please try again later.' });
+        } finally {
+            setIsSubmitting(false);
+        }
+    }
 
     return (
         <div className="min-h-screen bg-white text-slate-900 flex flex-col lg:flex-row pt-20">
@@ -14,11 +55,13 @@ export default function ContactPage() {
                 <div className="max-w-xl mx-auto w-full relative z-30">
                     <h1 className="text-4xl lg:text-5xl font-bold mb-12 text-slate-900 leading-tight">Start Your Project</h1>
 
-                    <form className="space-y-8">
+                    <form onSubmit={handleSubmit} className="space-y-8">
                         <div className="space-y-2">
                             <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">Name *</label>
                             <input
+                                name="name"
                                 type="text"
+                                required
                                 className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors"
                             />
                         </div>
@@ -27,13 +70,16 @@ export default function ContactPage() {
                             <div className="space-y-2">
                                 <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">Company Name *</label>
                                 <input
+                                    name="companyName"
                                     type="text"
+                                    required
                                     className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors"
                                 />
                             </div>
                             <div className="space-y-2">
                                 <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">Job Title</label>
                                 <input
+                                    name="jobTitle"
                                     type="text"
                                     className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors"
                                 />
@@ -44,14 +90,18 @@ export default function ContactPage() {
                             <div className="space-y-2">
                                 <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">Email *</label>
                                 <input
+                                    name="email"
                                     type="email"
+                                    required
                                     className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors"
                                 />
                             </div>
                             <div className="space-y-2">
                                 <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">Telephone *</label>
                                 <input
+                                    name="telephone"
                                     type="tel"
+                                    required
                                     className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors"
                                 />
                             </div>
@@ -60,7 +110,7 @@ export default function ContactPage() {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div className="space-y-2">
                                 <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">Inquiry Type *</label>
-                                <select className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors appearance-none">
+                                <select name="inquiryType" className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors appearance-none">
                                     <option>Sales</option>
                                     <option>Support</option>
                                     <option>Partnership</option>
@@ -69,7 +119,7 @@ export default function ContactPage() {
                             </div>
                             <div className="space-y-2">
                                 <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">Product Interest *</label>
-                                <select className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors appearance-none">
+                                <select name="productInterest" className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors appearance-none">
                                     <option>ASB System 40</option>
                                     <option>ASB System 100</option>
                                     <option>ASB GlassCourt</option>
@@ -85,7 +135,9 @@ export default function ContactPage() {
                         <div className="space-y-2">
                             <label className="block text-xs font-bold text-slate-500 uppercase tracking-widest">Your Message *</label>
                             <textarea
+                                name="message"
                                 rows={4}
+                                required
                                 placeholder="프로젝트 규모, 일정 등..."
                                 className="w-full bg-slate-50 border border-slate-200 rounded p-4 text-slate-900 focus:outline-none focus:border-yellow-500 transition-colors placeholder:text-slate-400"
                             />
@@ -93,7 +145,7 @@ export default function ContactPage() {
 
                         <div className="flex items-start gap-3">
                             <div className="relative flex items-center">
-                                <input type="checkbox" className="peer h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 bg-white checked:bg-slate-900 checked:border-slate-900 transition-all" />
+                                <input type="checkbox" required className="peer h-5 w-5 cursor-pointer appearance-none rounded border border-slate-300 bg-white checked:bg-slate-900 checked:border-slate-900 transition-all" />
                                 <Check className="pointer-events-none absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-white opacity-0 peer-checked:opacity-100" size={14} />
                             </div>
                             <label className="text-sm text-slate-500 leading-tight select-none">
@@ -101,8 +153,18 @@ export default function ContactPage() {
                             </label>
                         </div>
 
-                        <button className="w-full bg-slate-900 text-white font-bold py-4 rounded hover:bg-slate-800 transition-colors tracking-widest text-sm">
-                            SUBMIT REQUEST
+                        {submitStatus && (
+                            <div className={`p-4 rounded ${submitStatus.success ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+                                {submitStatus.message}
+                            </div>
+                        )}
+
+                        <button
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="w-full bg-slate-900 text-white font-bold py-4 rounded hover:bg-slate-800 transition-colors tracking-widest text-sm disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                            {isSubmitting ? 'SENDING...' : 'SUBMIT REQUEST'}
                         </button>
                     </form>
                 </div>
