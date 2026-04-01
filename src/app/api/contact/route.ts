@@ -27,7 +27,7 @@ export async function POST(request: Request) {
 
         const mailOptions = {
             from: process.env.SMTP_USER, // Sender address
-            to: process.env.CONTACT_EMAIL || process.env.SMTP_USER, // Receiver address
+            to: process.env.CONTACT_RECEIVER_EMAIL || process.env.SMTP_USER, // Receiver address
             replyTo: email,
             subject: `[ASB Website Inquiry] New message from ${name}`,
             html: `
