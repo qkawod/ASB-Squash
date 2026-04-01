@@ -39,10 +39,23 @@ export async function POST(request: Request) {
         }
 
         const mailOptions = {
-            from: `"${name}" <${process.env.SMTP_USER}>`, // Recommended by Hiworks
-            to: process.env.CONTACT_RECEIVER_EMAIL || process.env.SMTP_USER,
-            replyTo: email,
-            subject: `[ASB Website Inquiry] New message from ${name}`,
+            from: `"${name}" <${process.env.SMTP_USER}>`, // Sender address (MUST match SMTP_USER for Hiworks)
+            replyTo: email, // Reply to the user who filled the form
+            to: process.env.CONTACT_RECEIVER_EMAIL || "globe@globecorp.co.kr", // Receiver address
+            cc: process.env.SMTP_USER, // debug: send a copy to the sender to verify delivery (Used in previous project)
+            subject: `[ASB Website Inquiry] New message from ${name} - ${companyName}`,
+            text: `
+                Name: ${name}
+                Company: ${companyName}
+                Job Title: ${jobTitle}
+                Email: ${email}
+                Phone: ${telephone}
+                Type: ${inquiryType}
+                Product Interest: ${productInterest}
+                
+                Message:
+                ${message}
+            `,
             html: `
         <h2>New Inquiry Received</h2>
         <p><strong>Name:</strong> ${name}</p>
@@ -54,11 +67,13 @@ export async function POST(request: Request) {
         <p><strong>Product Interest:</strong> ${productInterest}</p>
         <br/>
         <h3>Message:</h3>
-        <p style="white-space: pre-wrap;">${message}</p>
+        <div style="background-color: #f4f4f4; padding: 15px; border-radius: 5px; white-space: pre-wrap;">
+            ${message}
+        </div>
       `,
         };
 
-        console.log(`Attempting to send email to: ${mailOptions.to}`);
+        console.log(`Attempting to send email to: ${mailOptions.to} (CC: ${mailOptions.cc})`);
         await transporter.sendMail(mailOptions);
         console.log("Email sent successfully!");
 
