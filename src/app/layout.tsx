@@ -95,17 +95,17 @@ export default function RootLayout({
               "logo": "https://asb-squash.vercel.app/logosquashcourt_s.png",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+82-31-717-1180",
+                "telephone": "070-4144-7837",
                 "contactType": "customer service",
                 "areaServed": "KR",
                 "availableLanguage": ["Korean", "English"]
               },
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "152, Pangyoyeok-ro, Bundang-gu",
-                "addressLocality": "Seongnam-si",
-                "addressRegion": "Gyeonggi-do",
-                "postalCode": "13529",
+                "streetAddress": "511, Yeongdong-daero, Gangnam-gu, Trade Tower",
+                "addressLocality": "Seoul",
+                "addressRegion": "Seoul",
+                "postalCode": "06164",
                 "addressCountry": "KR"
               },
               "sameAs": [

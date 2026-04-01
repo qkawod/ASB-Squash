@@ -118,7 +118,7 @@ export default function TechnologyPage() {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <div className="group relative rounded-xl overflow-hidden shadow-2xl bg-slate-200 flex items-center justify-center">
+                            <div className="group relative rounded-xl overflow-hidden shadow-2xl bg-slate-200 flex items-center justify-center transform transition-all duration-700 hover:scale-105 hover:z-10 origin-center">
                                 {item.image ? (
                                     item.image.endsWith('.mp4') ? (
                                         <video
@@ -127,16 +127,13 @@ export default function TechnologyPage() {
                                             loop
                                             muted
                                             playsInline
-                                            className="w-full h-auto transform transition-transform duration-700 group-hover:scale-105"
+                                            className="w-full h-auto"
                                         />
                                     ) : (
                                         <img
                                             src={item.image}
                                             alt={item.title}
-                                            className={`w-full h-auto transform transition-transform duration-700 ${index === 0 ? 'scale-110 group-hover:scale-115' :
-                                                index === 1 ? 'scale-105 group-hover:scale-110' :
-                                                    'group-hover:scale-105'
-                                                }`}
+                                            className="w-full h-auto"
                                         />
                                     )
                                 ) : (
@@ -149,7 +146,7 @@ export default function TechnologyPage() {
                                         <p className="text-slate-500 font-medium font-bold">Image Placeholder</p>
                                     </div>
                                 )}
-                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-700" />
+                                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-700 pointer-events-none" />
                             </div>
                         </motion.div>
 

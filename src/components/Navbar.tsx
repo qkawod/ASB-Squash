@@ -12,18 +12,21 @@ const navItems = [
         href: "/products",
     },
     {
-        label: "테크놀로지",
+        label: "핵심기술",
         href: "/technology",
     },
     {
-        label: "레퍼런스",
+        label: "프로젝트",
         href: "/references",
     },
     {
-        label: "컴퍼니",
+        label: "기업정보",
         href: "/company",
     },
-    { label: "컨택트", href: "/contact" },
+    { 
+        label: "고객지원", 
+        href: "/contact" 
+    },
 ]
 
 export function Navbar() {
@@ -42,7 +45,7 @@ export function Navbar() {
                         <div key={item.label} className="relative group">
                             <Link
                                 href={item.href}
-                                className="text-[20px] font-medium hover:text-yellow-600 transition-colors flex items-center gap-1"
+                                className="text-[20px] font-medium hover:text-red-600 transition-colors flex items-center gap-1"
                             >
                                 {item.label}
                             </Link>

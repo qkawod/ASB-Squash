@@ -187,49 +187,40 @@ export default function CompanyPage() {
             </section>
 
 
-            {/* 5. History Section (Timeline) */}
-            <section className="py-24 bg-white relative overflow-hidden">
+            {/* 5. Partnerships Section */}
+            <section className="py-16 lg:py-24 bg-white relative overflow-hidden text-center min-h-[400px] flex items-center justify-center">
                 {/* Background Decoration */}
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-slate-50 rounded-full blur-3xl -z-0 opacity-50" />
+                <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-slate-50 rounded-full blur-3xl -z-0 opacity-50" />
 
-                <div className="container mx-auto px-6 relative z-10">
-                    <div className="text-center mb-20">
-                        <h3 className="text-[#C62828] font-bold text-3xl md:text-5xl uppercase mb-3">History</h3>
+                <div className="container mx-auto px-6 relative z-10 max-w-6xl">
+                    {/* Added Title to fix the empty whitespace issue */}
+                    <div className="text-center mb-10">
+                        <h2 className="text-2xl md:text-3xl font-semibold text-slate-800 uppercase tracking-[0.2em]">Global Partners</h2>
                     </div>
 
-                    <div className="relative">
-                        {/* Center Line */}
-                        <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-slate-200" />
-
-                        {/* Timeline Items */}
+                    <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 justify-items-center">
                         {[
-                            { year: "1976", title: "ASB SystemCourt 출시", desc: "조립식 스쿼시 코트의 표준 정립" },
-                            { year: "1979", title: "Movable SideWall 개발", desc: "다목적 공간 활용의 시초" },
-                            { year: "1981", title: "ShowGlassCourt 최초 도입", desc: "British Open, 중계의 혁신" },
-                            { year: "2006", title: "ASB GlassFloor 출시", desc: "세계 최초 전문 스포츠 유리 바닥재" },
-                            { year: "Present", title: "Innovation Continues", desc: "지속적인 디지털 융합 및 혁신 선도" }
-                        ].map((item, index) => (
+                            { name: "Partner 1", img: "/logo/foto_1.png?v=1" },
+                            { name: "Partner 2", img: "/logo/foto_2.png?v=1" },
+                            { name: "Partner 3", img: "/logo/foto_3.png?v=1" },
+                            { name: "Partner 4", img: "/logo/foto_4.png?v=1" },
+                            { name: "Partner 5", img: "/logo/foto_5.png?v=1" },
+                            { name: "Partner 6", img: "/logo/foto_6.png?v=1" }
+                        ].map((partner, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-100px" }}
-                                transition={{ duration: 0.6 }}
-                                className={`flex items-center justify-between mb-16 last:mb-0 ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 xl:w-60 xl:h-60 bg-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center p-4 md:p-8 border border-slate-100 shrink-0"
                             >
-                                <div className="w-5/12" />
-
-                                {/* Point */}
-                                <div className="z-20 w-8 h-8 rounded-full bg-[#C62828] border-4 border-white shadow-lg flex items-center justify-center shrink-0">
-                                    <div className="w-2 h-2 bg-white rounded-full" />
-                                </div>
-
-                                {/* Content */}
-                                <div className={`w-5/12 ${index % 2 === 0 ? 'text-right' : 'text-left'}`}>
-                                    <span className="text-[#C62828] font-bold text-xl md:text-2xl block mb-2 font-mono">{item.year}</span>
-                                    <h4 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">{item.title}</h4>
-                                    <p className="text-slate-500 font-medium break-keep">{item.desc}</p>
-                                </div>
+                                <img 
+                                    src={partner.img} 
+                                    alt={partner.name}
+                                    title={partner.name}
+                                    className="max-w-full max-h-full object-contain"
+                                />
                             </motion.div>
                         ))}
                     </div>

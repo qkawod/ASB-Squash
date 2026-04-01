@@ -14,14 +14,14 @@ export async function POST(request: Request) {
             );
         }
 
-        // Transporter setup
+        // Transporter setup for Hiworks (Port 465)
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
-            port: Number(process.env.SMTP_PORT),
-            secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+            port: 465,
+            secure: true, // true for 465 (SSL)
             auth: {
                 user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS,
+                pass: process.env.SMTP_PASS?.replace(/"/g, ''), // Remove quotes if present
             },
         });
 
