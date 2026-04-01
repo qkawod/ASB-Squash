@@ -20,12 +20,12 @@ export default function ReferenceDetailClient({ project, prevSlug, nextSlug }: {
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
                     >
-                        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-gray-100 mb-4">
+                        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg bg-gray-50 mb-4 border border-gray-100">
                             <motion.img
                                 key={currentImage} // Trigger animation on image change
                                 src={currentImage}
                                 alt={project.title}
-                                className="w-full h-full object-cover"
+                                className={`w-full h-full ${currentImage.includes('logosquashcourt_s.svg') ? 'object-contain p-8' : 'object-cover'}`}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.5 }}

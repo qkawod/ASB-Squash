@@ -8,10 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://asb-squash.vercel.app"),
-  title: {
-    template: "%s | ASB Squash Courts",
-    default: "ASB Squash Courts - Global Leader in Squash Court Innovation",
-  },
+  title: "ASB Squash",
   description: "ASB Squash Courts is the world leader in squash court innovation, manufacturing, and installation. Explore our Glass Courts, System Courts, and advanced sports flooring technology. 스쿼시 코트 제작 및 설치의 글로벌 리더.",
   keywords: [
     "ASB Squash",
