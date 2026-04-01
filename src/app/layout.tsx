@@ -7,7 +7,7 @@ import { Footer } from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://asb-squash.vercel.app"),
+  metadataBase: new URL("https://www.asbsquash.co.kr"),
   title: "ASB Squash",
   description: "ASB Squash Courts is the world leader in squash court innovation, manufacturing, and installation. Explore our Glass Courts, System Courts, and advanced sports flooring technology. 스쿼시 코트 제작 및 설치의 글로벌 리더.",
   keywords: [
@@ -30,13 +30,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ASB Squash Courts - Global Leader in Squash Court Innovation",
     description: "The world leader in squash court innovation. Premium Glass Courts and System Courts.",
-    url: "https://asb-squash.vercel.app",
+    url: "https://www.asbsquash.co.kr",
     siteName: "ASB Squash Courts",
     images: [
       {
-        url: "/logosquashcourt_s.png",
-        width: 800,
-        height: 600,
+        url: "/ASB-1024x1024.png",
+        width: 1024,
+        height: 1024,
         alt: "ASB Squash Courts Logo",
       },
     ],
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ASB Squash Courts",
     description: "The world leader in squash court innovation.",
-    images: ["/logosquashcourt_s.png"],
+    images: ["/ASB-1024x1024.png"],
   },
   robots: {
     index: true,
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://asb-squash.vercel.app",
+    canonical: "https://www.asbsquash.co.kr",
   },
 };
 
@@ -88,8 +88,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               "name": "ASB Squash Courts",
-              "url": "https://asb-squash.vercel.app",
-              "logo": "https://asb-squash.vercel.app/logosquashcourt_s.png",
+              "url": "https://www.asbsquash.co.kr",
+              "logo": "https://www.asbsquash.co.kr/ASB-1024x1024.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "070-4144-7837",
