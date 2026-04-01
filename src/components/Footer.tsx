@@ -27,14 +27,7 @@ export function Footer() {
 
                     {/* Right Side: Navigation & Copyright */}
                     <div className="flex flex-col items-start md:items-end gap-3 md:gap-4 mt-4 md:mt-0">
-                        <nav className="flex flex-wrap items-center gap-6 text-xs sm:text-sm font-bold tracking-widest text-slate-800 uppercase">
-                            <Link href="/products" className="hover:text-red-600 transition-colors">Products</Link>
-                            <Link href="/technology" className="hover:text-red-600 transition-colors">Technology</Link>
-                            <Link href="/references" className="hover:text-red-600 transition-colors">References</Link>
-                            <Link href="/company" className="hover:text-red-600 transition-colors">Company</Link>
-                            <Link href="/contact" className="hover:text-red-600 transition-colors">Contact</Link>
-                        </nav>
-                        <div className="text-[10px] text-slate-400 font-semibold tracking-widest uppercase mt-1" suppressHydrationWarning>
+                        <div className="text-[10px] text-slate-400 font-semibold tracking-widest uppercase mt-4 md:mt-1" suppressHydrationWarning>
                             © {new Date().getFullYear()} ASBSQUASH CO.,LTD. ALL RIGHTS RESERVED.
                         </div>
                     </div>

@@ -260,9 +260,6 @@ export default function ContactPage() {
                         className="w-full lg:col-start-1 lg:row-start-2 lg:sticky lg:top-32"
                     >
                         <div className="relative group">
-                            {/* Decorative Frame */}
-                            <div className="absolute -inset-4 border border-slate-100 -z-10 group-hover:inset-0 transition-all duration-700" />
-                            
                             <div className="bg-slate-50 p-1 rounded-[1px] overflow-hidden shadow-2xl">
                                 <div className="aspect-[4/5] lg:aspect-video relative overflow-hidden">
                                     <video
