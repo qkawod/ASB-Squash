@@ -41,7 +41,8 @@ export async function POST(request: Request) {
         const mailOptions = {
             from: `"${name}" <${process.env.SMTP_USER}>`, // Sender address (MUST match SMTP_USER for Hiworks)
             replyTo: email, // Reply to the user who filled the form
-            to: process.env.CONTACT_RECEIVER_EMAIL || "globe@globecorp.co.kr", // Receiver address
+            // Support both English and Korean environment variable names caused by browser translation
+            to: process.env.CONTACT_RECEIVER_EMAIL || (process.env as any)['연락처_수신자_이메일'] || "info@asbsquash.co.kr", 
             cc: process.env.SMTP_USER, // debug: send a copy to the sender to verify delivery (Used in previous project)
             subject: `[ASB Website Inquiry] New message from ${name} - ${companyName}`,
             text: `
