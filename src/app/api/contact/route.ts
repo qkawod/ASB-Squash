@@ -14,20 +14,33 @@ export async function POST(request: Request) {
             );
         }
 
-        // Transporter setup for Hiworks (Port 465)
+        const port = 465;
+        // Clean up password (remove spaces and quotes if present)
+        const smtpPass = process.env.SMTP_PASS?.replace(/\s+/g, '').replace(/"/g, '') || '';
+
+        // Transporter setup optimized for Hiworks
         const transporter = nodemailer.createTransport({
             host: process.env.SMTP_HOST,
-            port: 465,
-            secure: true, // true for 465 (SSL)
+            port: port,
+            secure: true,
             auth: {
                 user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS?.replace(/"/g, ''), // Remove quotes if present
+                pass: smtpPass,
             },
         });
 
+        // Verify connection configuration
+        try {
+            await transporter.verify();
+            console.log("SMTP Server is ready to take our messages");
+        } catch (verifyError) {
+            console.error("SMTP Verification failed:", verifyError);
+            throw verifyError;
+        }
+
         const mailOptions = {
-            from: process.env.SMTP_USER, // Sender address
-            to: process.env.CONTACT_RECEIVER_EMAIL || process.env.SMTP_USER, // Receiver address
+            from: `"${name}" <${process.env.SMTP_USER}>`, // Recommended by Hiworks
+            to: process.env.CONTACT_RECEIVER_EMAIL || process.env.SMTP_USER,
             replyTo: email,
             subject: `[ASB Website Inquiry] New message from ${name}`,
             html: `
@@ -45,14 +58,17 @@ export async function POST(request: Request) {
       `,
         };
 
+        console.log(`Attempting to send email to: ${mailOptions.to}`);
         await transporter.sendMail(mailOptions);
+        console.log("Email sent successfully!");
 
         return NextResponse.json({ success: true, message: 'Email sent successfully' });
 
     } catch (error) {
-        console.error('Email send error:', error);
+        console.error('Detailed Email send error:', error);
+        const errorMessage = error instanceof Error ? error.message : 'Unknown error';
         return NextResponse.json(
-            { error: 'Failed to send email' },
+            { error: `메일 발송 실패: ${errorMessage}` },
             { status: 500 }
         );
     }
