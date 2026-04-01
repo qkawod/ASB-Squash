@@ -34,7 +34,7 @@ export function Footer() {
                             <Link href="/company" className="hover:text-red-600 transition-colors">Company</Link>
                             <Link href="/contact" className="hover:text-red-600 transition-colors">Contact</Link>
                         </nav>
-                        <div className="text-[10px] text-slate-400 font-semibold tracking-widest uppercase mt-1">
+                        <div className="text-[10px] text-slate-400 font-semibold tracking-widest uppercase mt-1" suppressHydrationWarning>
                             © {new Date().getFullYear()} ASBSQUASH CO.,LTD. ALL RIGHTS RESERVED.
                         </div>
                     </div>

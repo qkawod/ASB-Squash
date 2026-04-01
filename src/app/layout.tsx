@@ -77,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth light">
+    <html lang="ko" className="scroll-smooth light" suppressHydrationWarning>
       <body className={`${inter.className} bg-white text-slate-900 break-keep`}>
         <Navbar />
         <main className="min-h-screen pt-20">
