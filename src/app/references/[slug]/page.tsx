@@ -14,10 +14,10 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
         : `시공 사례: ${project.title} - ${project.location}`;
 
     return {
-        title: `${project.title} | ASBSQUASH 시공 실적`,
+        title: `${project.title}`,
         description: description,
         openGraph: {
-            title: `${project.title} - ASBSQUASH 시공 사례`,
+            title: `${project.title} | ASB Squash`,
             description: description,
             url: `https://www.asbsquash.co.kr/references/${project.slug}`,
             images: [project.image],
