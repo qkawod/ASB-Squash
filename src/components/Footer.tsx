@@ -25,7 +25,7 @@ export function Footer() {
                             <span className="hidden sm:inline text-slate-300">|</span>
                             <span className="whitespace-nowrap"><a href="mailto:info@asbsquash.co.kr" className="hover:text-slate-900 transition-colors">info@asbsquash.co.kr</a></span>
                              <span className="hidden sm:inline text-slate-300">|</span>
-                            <span className="whitespace-nowrap text-slate-400 font-normal">서울 강남구 영동대로 511 트레이드타워</span>
+                            <span className="whitespace-nowrap text-slate-400 font-normal">경기도 성남시 분당구 황새울로200번길 36, 동부루트빌딩 1010,1011</span>
                         </div>
                     </div>
 
