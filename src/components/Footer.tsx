@@ -19,7 +19,7 @@ export function Footer() {
                          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500 font-medium tracking-wide">
                             <span className="whitespace-nowrap"><span className="text-slate-900 font-semibold uppercase">주식회사 글로브</span></span>
                             <span className="hidden sm:inline text-slate-300">|</span>
-                            <span className="whitespace-nowrap"><span className="text-slate-400">사업자등록번호.</span> 249-88-01280</span>
+                            <span className="whitespace-nowrap">249-88-01280</span>
                             <span className="hidden sm:inline text-slate-300">|</span>
                             <span className="whitespace-nowrap"><span className="text-slate-400">T.</span> 070-4144-7837</span>
                             <span className="hidden sm:inline text-slate-300">|</span>
@@ -31,7 +31,7 @@ export function Footer() {
 
                     {/* Right Side: Navigation & Copyright */}
                     <div className="flex flex-col items-start md:items-end gap-3 md:gap-4 mt-4 md:mt-0">
-                        <div className="text-[10px] text-slate-400 font-semibold tracking-widest uppercase mt-4 md:mt-1" suppressHydrationWarning>
+                        <div className="text-[10px] text-slate-400 font-semibold tracking-widest uppercase mt-4 md:mt-1 whitespace-nowrap" suppressHydrationWarning>
                             © {new Date().getFullYear()} ASBSQUASH CO.,LTD. ALL RIGHTS RESERVED.
                         </div>
                     </div>
