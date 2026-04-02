@@ -1,9 +1,10 @@
 import { MetadataRoute } from 'next';
+import { REFERENCES } from '@/data/references';
 
 export default function sitemap(): MetadataRoute.Sitemap {
     const baseUrl = 'https://www.asbsquash.co.kr'; // Official production domain
 
-    return [
+    const staticRoutes: MetadataRoute.Sitemap = [
         {
             url: baseUrl,
             lastModified: new Date(),
@@ -77,4 +78,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.6,
         },
     ];
+
+    const referenceRoutes: MetadataRoute.Sitemap = REFERENCES.map((project) => ({
+        url: `${baseUrl}/references/${project.slug}`,
+        lastModified: new Date(),
+        changeFrequency: 'monthly',
+        priority: 0.7,
+    }));
+
+    return [...staticRoutes, ...referenceRoutes];
 }

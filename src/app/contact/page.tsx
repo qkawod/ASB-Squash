@@ -58,7 +58,9 @@ export default function ContactPage() {
                     
                     {/* Left Column Header (Position maintained) */}
                     <div className="mb-6 lg:mb-0">
-                        <h1 className="text-5xl lg:text-7xl font-light text-slate-900 mb-4 tracking-tighter uppercase">상담 신청하기</h1>
+                        <h1 className="text-5xl lg:text-7xl font-light text-slate-900 mb-4 tracking-tighter uppercase break-keep">
+                            ASBSQUASH<br />전문가 시공 상담
+                        </h1>
                         <div className="h-[1px] w-24 bg-slate-900 mb-8 lg:mb-12" />
                     </div>
 

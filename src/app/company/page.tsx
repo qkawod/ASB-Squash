@@ -73,6 +73,7 @@ export default function CompanyPage() {
                             transition={{ duration: 0.8 }}
                             className="lg:w-1/2"
                         >
+                            <h1 className="sr-only">에이에스비스쿼시(ASBSQUASH) - 기업 소개 및 브랜드 철학</h1>
                             <h3 className="text-[#C62828] font-bold text-sm tracking-widest uppercase mb-4">Introduction: Who We Are</h3>
                             <h2 className="text-3xl md:text-5xl font-bold mb-8 leading-tight break-keep">
                                 가장 오랜 역사와 독보적인 안정성,<br />
@@ -80,10 +81,10 @@ export default function CompanyPage() {
                             </h2>
                             <div className="space-y-6 text-lg text-slate-600 leading-relaxed font-medium">
                                 <p className="break-keep">
-                                    ASB SQUASH는 1976년 이래, 스쿼시 코트 제조 분야에서 명실상부한 글로벌 리더로 자리 잡았습니다.
+                                    에이에스비스쿼시(ASBSQUASH)는 1976년 설립 이후, 전 세계 스쿼시 코트 시공 분야의 정점에 서 있는 글로벌 파트너입니다. 
                                 </p>
                                 <p className="break-keep">
-                                    지난 수십 년간 전 세계에 수천 개의 코트를 설계, 공급, 설치하며 쌓아온 경험은 누구도 모방할 수 없는 ASB만의 자산입니다. 우리는 단순한 제조사가 아닙니다. 혁신적인 기술력으로 시장의 표준을 정립해 온 'Pioneer(개척자)'입니다.
+                                    우리는 단순한 제조를 넘어 스쿼시장 설계, 공급, 설치 전 과정을 아우르는 맞춤형 솔루션을 제공합니다. 수십 년간 쌓아온 에이에스비스쿼시만의 전문성과 데이터는 전 세계 수천 개 코트에서 그 가치를 증명하고 있습니다. 혁신적인 기술력으로 시장의 표준을 정립해 온 개척자(Pioneer)로서, 최고의 경기 환경을 보장합니다.
                                 </p>
                             </div>
                         </motion.div>

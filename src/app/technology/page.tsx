@@ -100,7 +100,16 @@ export default function TechnologyPage() {
                 <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-slate-50 to-transparent z-10" />
             </section>
 
-            {/* Header Section Removed */}<div className="h-72"></div>
+            <div className="container mx-auto px-4 py-24">
+                <div className="mb-16">
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 break-keep">
+                        스쿼시 코트 시공의 <span className="text-[#C62828]">기술 표준</span>
+                    </h1>
+                    <p className="text-xl text-slate-600 max-w-4xl leading-relaxed font-medium break-keep">
+                        에이에스비스쿼시(asb스쿼시)는 단순한 물리적 공간을 넘어, 선수가 자신의 한계에 도전하고 팬들이 최고의 전율을 경험할 수 있는 진보적인 경기 환경을 설계합니다. 실리카 샌드 충진 시스템부터 전동식 가변 벽체까지, ASBSQUASH가 전 세계 스쿼시 코트 제작 시장의 70% 이상을 점유하고 있는 이유, 그 핵심 기술을 공개합니다.
+                    </p>
+                </div>
+            </div>
 
             {/* Content List Section */}
             <div className="container mx-auto px-4 pb-32 space-y-32">

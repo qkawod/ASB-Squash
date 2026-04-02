@@ -9,6 +9,12 @@ import { motion } from "framer-motion"
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
+      {/* SEO Optimized H1 and Intro - Visually Hidden or Styled for Search Engines */}
+      <h1 className="sr-only">ASBSQUASH - 글로벌 No.1 스쿼시 코트 시공 및 스쿼시장 설계 전문</h1>
+      <div className="sr-only">
+        <p>세계 No.1 ASB 스쿼시 코트(ASBSQUASH) 공식 한국 서비스입니다. 1976년부터 이어진 에이에스비스쿼시의 혁신 기술로 쇼글라스코트, 가변형 벽체, 시스템 코트 등 대한민국 스쿼시 경기장의 표준을 제시합니다. 나주스쿼시, 마산스쿼시, 울산스쿼시 등 전국 주요 경기장 시공 실적을 보유한 국내 유일의 전문 솔루션을 확인하십시오.</p>
+      </div>
+
       {/* 1. HERO SECTION - LOCKED */}
       <section className="relative w-full bg-slate-900">
         <video

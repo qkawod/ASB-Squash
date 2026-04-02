@@ -17,11 +17,15 @@ export function Footer() {
                             />
                         </Link>
                          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-500 font-medium tracking-wide">
+                            <span className="whitespace-nowrap"><span className="text-slate-900 font-semibold uppercase">주식회사 글로브</span></span>
+                            <span className="hidden sm:inline text-slate-300">|</span>
+                            <span className="whitespace-nowrap"><span className="text-slate-400">사업자등록번호.</span> 249-88-01280</span>
+                            <span className="hidden sm:inline text-slate-300">|</span>
                             <span className="whitespace-nowrap"><span className="text-slate-400">T.</span> 070-4144-7837</span>
                             <span className="hidden sm:inline text-slate-300">|</span>
                             <span className="whitespace-nowrap"><a href="mailto:info@asbsquash.co.kr" className="hover:text-slate-900 transition-colors">info@asbsquash.co.kr</a></span>
                              <span className="hidden sm:inline text-slate-300">|</span>
-                            <span className="whitespace-nowrap">서울 강남구 영동대로 511 트레이드타워</span>
+                            <span className="whitespace-nowrap text-slate-400 font-normal">서울 강남구 영동대로 511 트레이드타워</span>
                         </div>
                     </div>
 

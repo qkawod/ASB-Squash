@@ -8,28 +8,31 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.asbsquash.co.kr"),
-  title: "ASB Squash",
-  description: "ASB Squash Courts is the world leader in squash court innovation, manufacturing, and installation. Explore our Glass Courts, System Courts, and advanced sports flooring technology. 스쿼시 코트 제작 및 설치의 글로벌 리더.",
+  title: {
+    default: "ASBSQUASH - 스쿼시 코트 및 스쿼시장 시공의 글로벌 리더",
+    template: "%s | ASBSQUASH"
+  },
+  description: "세계 No.1 ASB 스쿼시 코트(ASBSQUASH) 공식 한국 서비스. 1976년부터 이어진 에이에스비스쿼시의 혁신 기술로 쇼글라스코트, 가변형 벽체, 시스템 코트 등 독보적인 경기 환경을 제공합니다.",
   keywords: [
-    "ASB Squash",
-    "Squash Court",
-    "Glass Court",
-    "Squash Court Manufacturer",
-    "Squash Court Construction",
+    "ASBSQUASH",
+    "asb스쿼시",
+    "에이에스비스쿼시",
+    "squash",
+    "스쿼시",
+    "스쿼시코트",
+    "스쿼시장",
+    "스쿼시 코트 시공",
+    "스쿼시장 설계",
+    "나주스쿼시",
+    "마산스쿼시",
+    "울산스쿼시",
     "Movable Side Walls",
     "GlassFloor",
-    "Sports Flooring",
-    "스쿼시",
-    "스쿼시 코트",
-    "ASB 스쿼시",
-    "유리 코트",
-    "스쿼시 경기장",
-    "가변형 벽체",
     "스포츠 바닥재"
   ],
   openGraph: {
-    title: "ASB Squash Courts - Global Leader in Squash Court Innovation",
-    description: "The world leader in squash court innovation. Premium Glass Courts and System Courts.",
+    title: "ASBSQUASH - 글로벌 No.1 스쿼시 코트 및 경기장 솔루션",
+    description: "전 세계 스쿼시 코트의 표준, ASBSQUASH. 프리미엄 쇼글라스코트와 시스템 코트의 정점에 서 있는 에이에스비스쿼시를 경험하세요.",
     url: "https://www.asbsquash.co.kr",
     siteName: "ASB Squash Courts",
     images: [
@@ -86,8 +89,24 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "ASBSQUASH",
+              "url": "https://www.asbsquash.co.kr",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://www.asbsquash.co.kr/references?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "ASB Squash Courts",
+              "name": "ASBSQUASH (에이에스비스쿼시)",
               "url": "https://www.asbsquash.co.kr",
               "logo": "https://www.asbsquash.co.kr/ASB-1024x1024.png",
               "contactPoint": {
@@ -104,9 +123,35 @@ export default function RootLayout({
                 "addressRegion": "Seoul",
                 "postalCode": "06164",
                 "addressCountry": "KR"
-              },
-              "sameAs": [
-                // Add social media URLs here if available
+              }
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "홈",
+                  "item": "https://www.asbsquash.co.kr"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "제품소개",
+                  "item": "https://www.asbsquash.co.kr/products"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 3,
+                  "name": "시공실적",
+                  "item": "https://www.asbsquash.co.kr/references"
+                }
               ]
             }),
           }}

@@ -4,9 +4,9 @@ export default function NewsPage() {
     return (
         <div>
             <Hero
-                title="News & Info"
-                subtitle="Stay up to date with ASB Squash."
-                image="https://images.unsplash.com/photo-1504450758481-7338eba7524a?q=80&w=2069&auto=format&fit=crop"
+                title="ASBSQUASH - 최신 뉴스 및 정보"
+                subtitle="에이에스비스쿼시(asb스쿼시)의 혁신 사례와 전 세계 스쿼시 경기장 시공 분야의 최신 소식을 전해드립니다."
+                image="/projects/yolo-tallinn/main.jpg"
             />
             <div className="container mx-auto px-4 py-20">
                 <div className="grid md:grid-cols-3 gap-8">

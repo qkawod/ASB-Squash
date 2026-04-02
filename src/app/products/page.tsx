@@ -79,6 +79,14 @@ export default function ProductsPage() {
 
             {/* Product List Section with Spacing */}
             <div className="container mx-auto px-4 py-24 space-y-24">
+                <div className="mb-16">
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 break-keep">
+                        ASBSQUASH의 <span className="text-[#C62828]">기술 혁신</span> 제품군
+                    </h1>
+                    <p className="text-xl text-slate-600 max-w-4xl leading-relaxed font-medium break-keep">
+                        쇼글라스코트(ShowGlassCourt)부터 가변형 벽체(Movable SideWall)까지, 에이에스비스쿼시(asb스쿼시)는 지난 수십 년간 스쿼시 코트의 새로운 기준을 제시해 왔습니다. 세계 스쿼시 연맹(WSF)과 프로스쿼시연맹(PSA)의 엄격한 기준을 충족하는 최첨단 시스템을 만나보십시오.
+                    </p>
+                </div>
                 {PRODUCT_ITEMS.map((product, index) => (
                     <div
                         key={index}
