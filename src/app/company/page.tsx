@@ -10,7 +10,7 @@ export default function CompanyPage() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentImageIndex((prev) => (prev + 1) % 5) // 5 is the number of images
+            setCurrentImageIndex((prev) => (prev + 1) % 4) // 4 is the new number of images
         }, 5000)
         return () => clearInterval(interval)
     }, [])
@@ -23,11 +23,10 @@ export default function CompanyPage() {
                 {/* Background Video/Image */}
                 <div className="absolute inset-0 z-0">
                     {[
-                        "/T-point/GS033244.jpg.webp", // Existing image
+                        "/00-story-image-nyc-public-squash.jpg.webp",
                         "/Joo-Young-Na.jpg",
                         "/DSCF6165.JPG",
-                        "/Miguel-Rodrigguez.jpg",
-                        "/DSCF6613.jpg.webp"
+                        "/Miguel-Rodrigguez.jpg"
                     ].map((img, index) => (
                         <div
                             key={img}

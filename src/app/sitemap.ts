@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://asb-squash.vercel.app'; // Replace with your actual production domain if different
+    const baseUrl = 'https://www.asbsquash.co.kr'; // Official production domain
 
     return [
         {

@@ -34,10 +34,10 @@ export const metadata: Metadata = {
     siteName: "ASB Squash Courts",
     images: [
       {
-        url: "/ASB-1024x1024.png",
-        width: 1024,
-        height: 1024,
-        alt: "ASB Squash Courts Logo",
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "ASB Squash Courts - Global Leader",
       },
     ],
     locale: "en_US",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "ASB Squash Courts",
     description: "The world leader in squash court innovation.",
-    images: ["/ASB-1024x1024.png"],
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
