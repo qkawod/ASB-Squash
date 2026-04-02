@@ -8,10 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.asbsquash.co.kr"),
-  title: {
-    default: "ASB Squash",
-    template: "%s | ASB Squash"
-  },
+  title: "ASB Squash",
   description: "세계 No.1 ASB 스쿼시 코트(ASBSQUASH) 공식 한국 서비스. 1976년부터 이어진 에이에스비스쿼시의 혁신 기술로 쇼글라스코트, 가변형 벽체, 시스템 코트 등 독보적인 경기 환경을 제공합니다.",
   keywords: [
     "ASBSQUASH",
