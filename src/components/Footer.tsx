@@ -25,7 +25,7 @@ export function Footer() {
                         <div className="flex flex-col gap-2">
                             {/* Line 1: Basic Business Info */}
                             <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-xs text-slate-500 font-medium tracking-wide">
-                                <span className="whitespace-nowrap font-bold text-slate-900 uppercase">주식회사 글로브</span>
+                                <span className="whitespace-nowrap text-slate-900 uppercase">주식회사 글로브</span>
                                 <span className="text-slate-300">|</span>
                                 <span className="whitespace-nowrap">249-88-01280</span>
                                 <span className="text-slate-300">|</span>
