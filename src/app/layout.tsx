@@ -66,6 +66,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.asbsquash.co.kr",
   },
+  icons: {
+    icon: "/icon.png",
+    shortcut: "/icon.png",
+    apple: "/icon.png",
+  },
 };
 
 export default function RootLayout({
