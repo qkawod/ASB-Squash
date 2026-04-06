@@ -120,10 +120,10 @@ export default function RootLayout({
               },
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "36, Hwangsaeul-ro 200beon-gil, Bundang-gu, Seongnam-si, Dongbu Root Bldg 1010,1011",
-                "addressLocality": "Seongnam-si",
-                "addressRegion": "Gyeonggi-do",
-                "postalCode": "13595",
+                "streetAddress": "511, Yeongdong-daero, Trade Tower 21F",
+                "addressLocality": "Gangnam-gu",
+                "addressRegion": "Seoul",
+                "postalCode": "06141",
                 "addressCountry": "KR"
               }
             }),
