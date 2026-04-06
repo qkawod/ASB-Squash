@@ -67,9 +67,14 @@ export const metadata: Metadata = {
     canonical: "https://www.asbsquash.co.kr",
   },
   icons: {
-    icon: "/icon.png",
-    shortcut: "/icon.png",
-    apple: "/icon.png",
+    icon: [
+      { url: "/icon.png?v=3", type: "image/png" },
+      { url: "/favicon.ico?v=3", sizes: "any" }
+    ],
+    shortcut: "/icon.png?v=3",
+    apple: [
+      { url: "/apple-icon.png?v=3", sizes: "180x180", type: "image/png" }
+    ],
   },
 };
 
