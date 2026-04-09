@@ -23,7 +23,7 @@ export default function CompanyPage() {
                 {/* Background Video/Image */}
                 <div className="absolute inset-0 z-0">
                     {[
-                        "/00-story-image-nyc-public-squash.jpg.webp",
+                        "/OutdoorCourt/00-story-image-nyc-public-squash.jpg.webp",
                         "/Joo-Young-Na.jpg",
                         "/DSCF6165.JPG",
                         "/Miguel-Rodrigguez.jpg"
@@ -200,12 +200,12 @@ export default function CompanyPage() {
 
                     <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12 justify-items-center">
                         {[
-                            { name: "Partner 1", img: "/logo/foto_1.png?v=1" },
-                            { name: "Partner 2", img: "/logo/foto_2.png?v=1" },
-                            { name: "Partner 3", img: "/logo/foto_3.png?v=1" },
-                            { name: "Partner 4", img: "/logo/foto_4.png?v=1" },
-                            { name: "Partner 5", img: "/logo/foto_5.png?v=1" },
-                            { name: "Partner 6", img: "/logo/foto_6.png?v=1" }
+                            { name: "Partner 1", img: "/logo/foto_1.png", p: "p-0" },
+                            { name: "Partner 2", img: "/logo/foto_2.png", p: "p-0" },
+                            { name: "Partner 3", img: "/logo/foto_3.png", p: "p-0" },
+                            { name: "Partner 4", img: "/logo/foto_4.png", p: "p-0" },
+                            { name: "Partner 5", img: "/logo/WSF.png", p: "p-10" }, // Matched to Home
+                            { name: "Partner 6", img: "/logo/foto_6.png", p: "p-11" }  // Matched to Home
                         ].map((partner, index) => (
                             <motion.div
                                 key={index}
@@ -213,13 +213,13 @@ export default function CompanyPage() {
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 xl:w-60 xl:h-60 bg-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center p-4 md:p-8 border border-slate-100 shrink-0"
+                                className={`w-[160px] h-[160px] md:w-[200px] md:h-[200px] bg-white rounded-full shadow-lg hover:shadow-2xl transition-all duration-300 flex items-center justify-center border border-slate-100 shrink-0 ${partner.p}`}
                             >
                                 <img 
                                     src={partner.img} 
                                     alt={partner.name}
                                     title={partner.name}
-                                    className="max-w-full max-h-full object-contain"
+                                    className={`max-w-full max-h-full object-contain ${partner.img.includes('WSF') ? 'scale-100' : 'scale-110'}`}
                                 />
                             </motion.div>
                         ))}

@@ -176,7 +176,7 @@ export default function ContactPage() {
                                                     <option value="ASB System 40">ASB System 40</option>
                                                     <option value="ASB System 100">ASB System 100</option>
                                                     <option value="ASB GlassCourt">ASB GlassCourt</option>
-                                                    <option value="ASB TPoint">ASB TPoint</option>
+                                                    <option value="ASB OutdoorSquashCourt">ASB OutdoorSquashCourt</option>
                                                 </select>
                                                 <div className="pointer-events-none absolute right-0 top-1/2 -translate-y-1/2">
                                                     <svg className="h-4 w-4 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -31,10 +31,17 @@ export default function Home() {
       {/* Federation Logos Section - Option 2 (White Background) */}
       <div className="w-full bg-white py-16">
         <div className="container mx-auto px-4">
-          <div className="flex justify-around items-center gap-4 overflow-x-auto">
-            {[1, 2, 5, 4, 3].map((num) => (
-              <div key={num} className="w-[230px] h-[230px] rounded-full bg-white flex items-center justify-center shadow-lg shrink-0 p-2">
-                <img src={`/logo/foto_${num}.png`} alt={`Federation Logo ${num}`} className="w-full h-full object-contain" />
+          <div className="flex justify-center items-center gap-4 md:gap-8 overflow-hidden py-4 flex-wrap">
+            {[
+              { src: '/logo/foto_1.png', p: 'p-0' },
+              { src: '/logo/foto_2.png', p: 'p-0' },
+              { src: '/logo/WSF.png', p: 'p-10' }, // Final WSF
+              { src: '/logo/foto_4.png', p: 'p-0' },
+              { src: '/logo/foto_3.png', p: 'p-0' }, // Restored 3
+              { src: '/logo/foto_6.png', p: 'p-11' }  // French Logo
+            ].map((logo, idx) => (
+              <div key={idx} className={`w-[180px] h-[180px] md:w-[200px] md:h-[200px] rounded-full bg-white flex items-center justify-center shadow-lg shrink-0 ${logo.p}`}>
+                <img src={logo.src} alt={`Partner Logo ${idx}`} className={`w-full h-full object-contain ${logo.src.includes('WSF') ? 'scale-100' : 'scale-110'}`} />
               </div>
             ))}
           </div>
@@ -109,7 +116,7 @@ export default function Home() {
 
                   <h3 className="text-3xl font-bold text-white mb-4">System 100</h3>
                   <span className="inline-flex items-center text-white font-bold group-hover:text-[#C62828] transition-colors">
-                    Discover GlassFloor <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+                    Discover System 100 <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
                   </span>
                 </div>
               </Link>
@@ -135,21 +142,21 @@ export default function Home() {
               </Link>
             </motion.div>
 
-            {/* Product 5: ASB TPoint */}
+            {/* Product 5: ASB OutdoorSquashCourt */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <Link href="/products/asb-tpoint" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
-                <img src="/T-point/88.jpg" alt="ASB TPoint" className="w-full h-full object-contain bg-slate-900 transition-transform duration-700 scale-[2.0] group-hover:scale-100" />
+              <Link href="/products/asb-outdoorsquashcourt" className="group relative overflow-hidden rounded-2xl h-[450px] md:h-[600px] shadow-lg block">
+                <img src="/OutdoorCourt/00-story-image-nyc-public-squash.jpg.webp" alt="ASB OutdoorSquashCourt" className="w-full h-full object-cover object-[center_85%] bg-slate-900 transition-transform duration-700 scale-[1.2] group-hover:scale-100" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8 w-full">
 
-                  <h3 className="text-3xl font-bold text-white mb-4">ASB TPoint</h3>
+                  <h3 className="text-3xl font-bold text-white mb-4">ASB OutdoorSquashCourt</h3>
                   <span className="inline-flex items-center text-white font-bold group-hover:text-[#C62828] transition-colors">
-                    View TPoint <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
+                    View OutdoorSquashCourt <ArrowRight className="w-5 h-5 ml-2 transition-transform group-hover:translate-x-2" />
                   </span>
                 </div>
               </Link>

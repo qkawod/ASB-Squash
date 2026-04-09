@@ -5,9 +5,9 @@ import Link from "next/link"
 import { motion } from "framer-motion"
 
 const HERO_IMAGES = [
-    "/T-point/88.jpg",
+    "/OutdoorCourt/merlin_Outdoor.jpg",
     "/GlassCourt/228.jpg",
-    "/00-story-image-nyc-public-squash.jpg.webp",
+    "/OutdoorCourt/00-story-image-nyc-public-squash.jpg.webp",
     "/55.jpg"
 ]
 
@@ -37,10 +37,14 @@ const PRODUCT_ITEMS = [
         image: "/GameCourt/b_27.jpg"
     },
     {
-        title: "ASB TPoint",
+        title: "ASB OutdoorSquashCourt",
         subtitle: "",
-        description: "도심 속 일상을 바꾸는 스마트 아웃도어 코트 우리는 \"숨겨진\" 실내 공간에 있던 스쿼시를 도심의 탁 트인 야외로 끌어내면, 더 많은 사람이 이 건강하고 즐거운 소셜 스포츠를 접하게 될 것이라 믿습니다. ASB TPoint는 아름다운 디자인과 혁신적인 전자 제어 기술이 결합한 스마트 코트로, 기존에 없던 새롭고 흥미진진한 스포츠 경험을 도시 곳곳에 선사합니다.",
-        image: "/T-point/88.jpg"
+        description: `야외에서 즐기는 스쿼시
+
+ASB는 스쿼시 코트 제작 및 설치 분야에서 오랜 역사와 검증된 경험을 보유하고 있습니다. 또한 그동안 다양한 실외 글라스코트 설치를 통해 축적한 풍부한 노하우를 바탕으로, 야외 환경에 최적화된 새로운 스쿼시 코트를 개발하였습니다.
+
+더 많은 사람들이 스쿼시를 쉽게 접할 수 있는 환경을 만들고, 새로운 스쿼시 인구를 늘리며, 스쿼시라는 스포츠의 매력을 널리 알리는 것이 ASB OutdoorSquashCourt의 목표입니다.`,
+        image: "/OutdoorCourt/00-story-image-nyc-public-squash.jpg.webp"
     },
     {
         title: "ASB RainbowCourt",
@@ -102,11 +106,12 @@ export default function ProductsPage() {
                             transition={{ duration: 0.6 }}
                         >
                             <Link href={`/products/${product.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                                <div className="group relative rounded-xl overflow-hidden shadow-2xl bg-slate-900 cursor-pointer">
+                                <div className="group relative rounded-xl overflow-hidden shadow-2xl bg-slate-900 cursor-pointer aspect-[16/10]">
                                     <img
                                         src={product.image}
                                         alt={product.title}
-                                        className="w-full h-auto transform transition-transform duration-700 group-hover:scale-105"
+                                        className={`w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105 ${product.title === 'ASB OutdoorSquashCourt' ? 'object-[center_85%]' : 'object-center'
+                                            }`}
                                     />
                                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-700" />
                                 </div>

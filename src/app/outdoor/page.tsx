@@ -11,8 +11,8 @@ export default function OutdoorPage() {
                 ctaText="Learn More"
             />
             <div className="container mx-auto px-4 py-20">
-                <h2 className="text-3xl font-bold mb-8 text-slate-900">TPOINT</h2>
-                <p className="text-slate-600 mb-12">The smart public squash court.</p>
+                <h2 className="text-3xl font-bold mb-8 text-slate-900">ASB OutdoorSquashCourt</h2>
+                <p className="text-slate-600 mb-12">야외 환경에 최적화된 새로운 스쿼시 코트</p>
             </div>
         </div>
     )
